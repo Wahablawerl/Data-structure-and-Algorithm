@@ -1,25 +1,13 @@
-// using iteration to create fibanacci function
+function fibonacci(n) {
+  let fibArray = [0, 1];
 
-function fibonacci(num) {
-  let x = 0; // represent the first term
-  let y = 1; // represent the second term
-  let z; // representing the sum of x and y
-
-  let i = 0;
-  for (i = 2; i < num; i++) {
-    z = x + y;
-    x = y;
-    y = z;
+  for (let i = 2; i < n; i++) {
+    fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
   }
-  return y;
+
+  return fibArray;
 }
 
-//fibonacci using recursion
-
-function fib(n) {
-  if (n < 2) {
-    return n;
-  } else {
-    return fib(n - 1) + fib(n - 2);
-  }
-}
+console.log(fibonacci(12));
+console.log(fibonacci(10));
+console.log(fibonacci(15));
