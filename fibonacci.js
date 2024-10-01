@@ -11,3 +11,16 @@ function fibonacci(n) {
 console.log(fibonacci(12));
 console.log(fibonacci(10));
 console.log(fibonacci(15));
+
+//FIBONACCI SEQUENCE USING RECURSIVE
+
+function recursiveFibonacci(n) {
+  if (n < 2) {
+    return n;
+  }
+  return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+}
+
+console.log(recursiveFibonacci(0));
+console.log(recursiveFibonacci(1));
+console.log(recursiveFibonacci(6));
