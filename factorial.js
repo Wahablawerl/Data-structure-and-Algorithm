@@ -9,3 +9,16 @@ function factorial(n) {
 console.log(factorial(12));
 console.log(factorial(10));
 console.log(factorial(15));
+
+//Factorial function using recursion
+
+function recursiveFactorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * recursiveFactorial(n - 1);
+}
+
+console.log(recursiveFactorial(0));
+console.log(recursiveFactorial(1));
+console.log(recursiveFactorial(5));
